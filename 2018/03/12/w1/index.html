@@ -1,0 +1,212 @@
+<!doctype html>
+<html lang="en">
+
+<!-- Head -->
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="description" content="">
+    <meta name="keyword" content="">
+    <link rel="shortcut icon" href="/image/favicon.jpg">
+
+    
+
+    <title>
+        
+        w1-利用python進行分組 |
+        
+        協同產品設計實習  weiwei-Blog
+    </title>
+
+    <!-- Bootstrap Core CSS -->
+    <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+
+    <!-- Custom Fonts -->
+    <link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!-- Plugin CSS -->
+
+
+    <!-- Custom CSS -->
+    <!-- ↓这是stylus文件 -->
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/home.css">
+    <link rel="stylesheet" href="/css/highlight.css">
+    <link rel="stylesheet" href="/css/toc.css">
+
+
+</head>
+<body></body>
+
+
+<body>
+
+<!-- Header -->
+<!-- Post Header -->
+<style type="text/css">
+    header.intro-header {
+     background-image: url('');
+        /*post*/
+    
+    }
+</style>
+
+<header class="intro-header">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <!-- 文章 -->
+                
+                <div class="post-heading">
+                    <div class="tags">
+                        
+                    </div>
+                    <h1>w1-利用python進行分組</h1>
+                    <h2 class="subheading"></h2>
+                    <span class="meta">
+                            Posted by weiwei on
+                        2018-03-12
+                        </span>
+                </div>
+                <!-- 非文章 -->
+                
+
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- Nav -->
+<!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/">協同產品設計實習  weiwei-Blog</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <!-- Known Issue, found by Hux:
+            <nav>'s height woule be hold on by its content.
+            so, when navbar scale out, the <nav> will cover tags.
+            also mask any touch event of tags, unfortunately.
+        -->
+        <div id="huxblog_navbar">
+            <div class="navbar-collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    
+                    <li><a href="/">Home</a></li>
+                    
+                    <li><a href="/portfolio">Portfolio</a></li>
+                    
+                    <li><a href="/about">About</a></li>
+                    
+                </ul>
+            </div>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+
+<!-- Content -->
+<!-- Content -->
+<div class="container">
+    <div class="row">
+        <!-- Post container -->
+
+        <div class="
+                col-lg-8 col-lg-offset-1
+                col-md-8 col-md-offset-1
+                col-sm-12
+                col-xs-12
+                post-container
+            ">
+
+            <p>第6組組員 40523132 實作利用 python 將座位表分組<br><a href="https://github.com/s40523136/cd2018">小組倉儲連結</a><br>程式碼如下:</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="keyword">with</span> open(<span class="string">"a.txt"</span>) <span class="keyword">as</span> fh:</span><br><span class="line">    team = fh.readlines()</span><br><span class="line">    </span><br><span class="line">num = <span class="number">0</span></span><br><span class="line">    </span><br><span class="line"><span class="keyword">for</span> i  <span class="keyword">in</span> range(len(team)):</span><br><span class="line">    a = team[i].strip().split() <span class="comment">#strip()去除(頭/尾)空白, split()分割</span></span><br><span class="line">    </span><br><span class="line">    <span class="keyword">if</span> i%<span class="number">1</span> == <span class="number">0</span>:     </span><br><span class="line">        num += <span class="number">1</span></span><br><span class="line">        print(<span class="string">"第"</span> + str(num) + <span class="string">"組:"</span>,a[<span class="number">0</span>:<span class="number">3</span>])</span><br><span class="line">        </span><br><span class="line">    <span class="keyword">if</span> i%<span class="number">1</span> == <span class="number">0</span>:</span><br><span class="line">        num += <span class="number">1</span></span><br><span class="line">        print(<span class="string">"第"</span> + str(num) + <span class="string">"組:"</span>,a[<span class="number">3</span>:<span class="number">6</span>])</span><br><span class="line">        </span><br><span class="line">    <span class="keyword">if</span> i%<span class="number">1</span> == <span class="number">0</span>:</span><br><span class="line">        num += <span class="number">1</span></span><br><span class="line">        <span class="keyword">if</span> num == <span class="number">15</span>:   <span class="comment">#如果跑到15就取消</span></span><br><span class="line">            <span class="keyword">break</span></span><br><span class="line">        <span class="keyword">else</span>:            </span><br><span class="line">            print(<span class="string">"第"</span> + str(num) + <span class="string">"組:"</span>,a[<span class="number">6</span>:<span class="number">9</span>])</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">第1組: [&apos;40523115&apos;, &apos;40523108&apos;, &apos;40523116&apos;]</span><br><span class="line">第2組: [&apos;40523144&apos;, &apos;40523111&apos;, &apos;40523141&apos;]</span><br><span class="line">第3組: [&apos;40523104&apos;, &apos;40523102&apos;, &apos;40523123&apos;]</span><br><span class="line">第4組: [&apos;40523137&apos;, &apos;40523117&apos;, &apos;40523135&apos;]</span><br><span class="line">第5組: [&apos;40523147&apos;, &apos;40523146&apos;, &apos;40523145&apos;]</span><br><span class="line">第6組: [&apos;40523122&apos;, &apos;40523136&apos;, &apos;40523132&apos;]</span><br><span class="line">第7組: [&apos;40523127&apos;, &apos;40523126&apos;, &apos;40523125&apos;]</span><br><span class="line">第8組: [&apos;40523124&apos;, &apos;40523118&apos;, &apos;40523131&apos;]</span><br><span class="line">第9組: [&apos;40523121&apos;, &apos;40523120&apos;, &apos;40523119&apos;]</span><br><span class="line">第10組: [&apos;40523105&apos;, &apos;40523106&apos;, &apos;40523107&apos;]</span><br><span class="line">第11組: [&apos;40523143&apos;, &apos;40523128&apos;, &apos;40523129&apos;]</span><br><span class="line">第12組: [&apos;40523130&apos;, &apos;40523139&apos;, &apos;40523133&apos;]</span><br><span class="line">第13組: [&apos;40523142&apos;, &apos;40523148&apos;, &apos;40523140&apos;]</span><br><span class="line">第14組: [&apos;40523113&apos;, &apos;40523138&apos;, &apos;40523134&apos;]</span><br></pre></td></tr></table></figure>
+
+
+            <!-- Pager -->
+            <ul class="pager">
+                
+                <li class="previous">
+                    <a href="/2018/03/12/w2/" >&larr; Previous Post</a>
+                </li>
+                
+                
+            </ul>
+
+
+
+        </div>
+        <!-- Sidebar container-->
+        <div class="
+    col-lg-3 col-lg-offset-0
+    col-md-3 col-md-offset-0
+    col-sm-12
+    col-xs-12
+    sidebar-container
+">
+            <!-- toc -->
+            <div class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix-top" role="complementary">
+                <h4><i class="fa fa-bookmark"></i> Catalog</h4>
+                <ul class="nav bs-docs-sidenav">
+
+                </ul>
+
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<!-- Footer -->
+<!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <ul class="list-inline text-center">
+                
+
+                </ul>
+                <p class="copyright text-muted">
+                    Copyright &copy; 協同產品設計實習  weiwei-Blog 2018
+                    <br>
+                    Theme by <a href="http://beantech.org/">Bean Tech</a>
+                    <span style="display: inline-block; margin: 0 5px;">
+                        <i class="fa fa-heart"></i>
+                    </span> 
+                    re-Ported by <a href="https://github.com/s40523132/cd2018">協同產品設計實習  weiwei-Blog</a>
+                </p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- jQuery -->
+<script src="https://cdn.staticfile.org/jquery/2.2.4/jquery.min.js"></script>
+
+<!-- Bootstrap Core JavaScript -->
+<script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+<!-- Custom Theme JavaScript -->
+<script src="/js/script.js"></script>
+
+
+
+
+</body>
+</html>
