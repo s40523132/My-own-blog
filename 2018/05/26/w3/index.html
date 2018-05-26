@@ -135,20 +135,16 @@
 
             <script type="text/javascript" src="https://cdn.rawgit.com/brython-dev/brython/3.5.1/www/src/brython.js"></script>
 
-<body onload="brython()"><br>    <div class="paginator"><br>        <script type="text/python3">
-</script>
-
-<!-- 以下實際利用  Brython 繪圖-->
-<canvas id="onegear" width="800" height="600"></canvas>
-
 <script>
 window.onload=function(){
 // 設定 data/py 為共用程式路徑
 brython({debug:1, pythonpath:['./']});
 }
 </script>
-<!-- 以下實際利用  Brython 繪圖-->
 
+<body onload="brython()"><br>    <div class="paginator"><br>        <script type="text/python3">
+
+<!-- 以下實際利用  Brython 繪圖-->
 <canvas id="onegear" width="800" height="600"></canvas>
 
 from browser import document as doc
@@ -280,7 +276,7 @@ n = 53
 # 壓力角
 pa = 20
 Spur(ctx).Gear(x, y, r, n, pa, "blue")
-
+</script>
 <!-- 以下處理 Cango Spur Gear -->
 
 <!-- Cango 程式庫 -->
